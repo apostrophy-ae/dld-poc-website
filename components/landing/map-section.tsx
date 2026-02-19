@@ -96,7 +96,6 @@ export function MapSection() {
         icon: {
           url: "/images/map-marker.svg",
           // SVG is 233×259. Pin tip sits at ~(116, 125) in SVG space.
-          // Scale to 36px wide → height = 36 * 259/233 ≈ 40px
           // Tip anchor: x = 18 (center), y = 125 * (40/259) ≈ 19
           scaledSize: new window.google.maps.Size(108, 120),
           anchor: new window.google.maps.Point(54, 57),
