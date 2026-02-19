@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
 import { X } from "lucide-react";
 
-const MAPS_KEY = "AIzaSyA6myHzS10YXdcazAFalmXvDkrYCp5cLc8";
+const MAPS_KEY = "AIzaSyBt64Gfkbo69vHlcj1A6gBrS2ierLIshPg";
 
 interface AreaProperties {
   NAME_EN: string;
