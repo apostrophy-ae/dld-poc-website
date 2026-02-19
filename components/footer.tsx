@@ -144,7 +144,7 @@ export function Footer() {
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-between gap-4 text-xs text-dld-text-secondary md:flex-row">
-            <p>Copyright 2024 Dubai Land Department. All Rights Reserved.</p>
+            <p>Copyright 2026 Dubai Land Department. All Rights Reserved.</p>
             <div className="flex gap-6">
               <Link href="#" className="hover:text-dld-green transition-colors">
                 Privacy Policy
