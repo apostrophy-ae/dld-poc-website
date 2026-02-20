@@ -44,7 +44,7 @@ export function HeroSection() {
   const handleSelect = (item: string) => {
     setQuery(item);
     setOpen(false);
-    router.push("/how-to-rent");
+    router.push("/services");
   };
 
   return (
@@ -61,7 +61,7 @@ export function HeroSection() {
         />
       </div>
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dld-dark/80 via-dld-dark/20 to-dld-dark/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-dld-dark/80 via-dld-green/20 to-dld-dark/20" />
 
       {/* Main content */}
       <div className="text-center relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-6 pt-24">
@@ -146,7 +146,7 @@ export function HeroSection() {
 
             {/* Suggestion dropdown */}
             {open && (
-              <div className="absolute top-full mt-3 w-full rounded-[30px] bg-dld-white shadow-xl py-3 z-50">
+              <div className="absolute top-full mt-3 w-full rounded-[30px] bg-dld-white shadow-xl py-3 z-9999">
                 {suggestions.map((item, i) => (
                   <button
                     key={i}
@@ -168,10 +168,10 @@ export function HeroSection() {
       </div>
 
       {/* Stats bar */}
-      <div className="relative z-10 w-full">
+      <div className="relative z-1 w-full">
         <div
           style={{ background: "rgba(217, 217, 217, 0.20)" }}
-          className="backdrop-blur-xs border-t border-dld-white/10"
+          className="backdrop-blur-xs border-t border-dld-white/10 h-[195px]"
         >
           <div className="mx-auto max-w-7xl px-6 py-6">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -183,7 +183,7 @@ export function HeroSection() {
                   <span className="text-[19.758px] text-dld-white">
                     {stat.caption}
                   </span>
-                  <span className="text-3xl font-bold text-dld-white md:text-4xl">
+                  <span className="text-3xl font-normal text-dld-white md:text-[60px]">
                     {stat.value}
                   </span>
                   <span className="text-sm text-dld-white/60">

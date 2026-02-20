@@ -23,7 +23,7 @@ const newsItems = [
     image: "/images/a210fac0cd6b3d1dfa6734ba9c622c4e93fa9171.png",
   },
   {
-    date: "PEOPLE",
+    date: "14 JUN",
     title: "Meet the team behind Dubai's real estate transformation",
     image: "/images/df94f08416f5d529d03602a1eaf2a09e77b5f3cf.png",
   },

@@ -114,12 +114,6 @@ export function StepsCards() {
                   <span className="absolute top-6 left-6 text-6xl font-bold text-dld-white drop-shadow-md z-10">
                     {step.number}
                   </span>
-                  {/* "Responsibilities" label */}
-                  <div className="absolute bottom-6 left-6 z-10">
-                    <span className="text-xs font-medium uppercase tracking-wider text-dld-white/70 bg-dld-dark/40 backdrop-blur-sm rounded-full px-3 py-1">
-                      Responsibilities
-                    </span>
-                  </div>
                   {/* Gradient overlay for readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-dld-dark/50 via-transparent to-dld-dark/20" />
                 </div>
@@ -127,10 +121,10 @@ export function StepsCards() {
                 {/* Content */}
                 <div className="flex flex-1 flex-col justify-between gap-6 p-8 lg:flex-row lg:items-start">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-dld-black">
+                    <h3 className="text-[24px] font-bold text-dld-black mb-[32px]">
                       {step.title}
                     </h3>
-                    <p className="mt-2 text-dld-text-secondary">
+                    <p className="mt-2 text-[16px] font-medium text-dld-text-secondary">
                       {step.description}
                     </p>
                     <ul className="mt-4 space-y-2">
@@ -139,7 +133,7 @@ export function StepsCards() {
                           key={i}
                           className="flex items-start gap-2 text-sm text-dld-text-body"
                         >
-                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-dld-black" />
+                          <span className="mt-1.5 h-1.5 w-1.5  text-[16px] font-medium shrink-0 rounded-full bg-dld-black" />
                           {detail}
                         </li>
                       ))}
@@ -149,7 +143,7 @@ export function StepsCards() {
                   {step.openModal ? (
                     <button
                       onClick={() => setModalOpen(true)}
-                      className="flex shrink-0 items-center gap-2 text-sm font-medium text-dld-green hover:underline whitespace-nowrap"
+                      className="flex shrink-0 items-center gap-2 text-sm font-medium text-dld-green hover:underline whitespace-nowrap self-end"
                       aria-label={`Open property search guide: ${step.link}`}
                     >
                       {step.link}

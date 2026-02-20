@@ -24,8 +24,8 @@ export function ServicesHero() {
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start">
           {/* Left text */}
           <div className="flex flex-1 flex-col justify-center lg:pt-8">
-            <p className="text-2xl font-bold text-dld-green">Rent</p>
-            <h1 className="mt-3 text-5xl font-bold uppercase tracking-tight text-dld-black md:text-7xl lg:text-8xl leading-none">
+            <p className="text-[32px] font-normal text-dld-green">Rent</p>
+            <h1 className="mt-3 text-[96px] font-bold uppercase tracking-tight text-dld-black md:text-7xl lg:text-8xl leading-none">
               Live. Belong.
               <br />
               Dubai.
