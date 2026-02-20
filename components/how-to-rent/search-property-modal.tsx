@@ -93,7 +93,7 @@ export function SearchPropertyModal({
           <img
             alt=""
             src={"/images/modalImage.png"}
-            className="object-cover w-full h-full max-w-full bg-contain z-0 relative scale-150 top-20"
+            className="object-contain h-full z-0 relative  -top-20"
             style={{
               objectFit: "contain",
             }}
