@@ -48,7 +48,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col justify-between overflow-hidden">
+    <section className="relative flex flex-col justify-between overflow-hidden" style={{ minHeight: "calc(100vh - var(--accessibility-bar-height))" }}>
       {/* Background image */}
       <div className="absolute inset-0">
         <Image

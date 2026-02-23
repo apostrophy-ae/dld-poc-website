@@ -67,6 +67,9 @@
 }
 
 :root {
+    /* Layout */
+    --accessibility-bar-height: 64px;
+
     /* DLD Brand Tokens */
     --dld-green: #4aa579;
     --dld-green-light: #e4f4e7;

@@ -29,7 +29,7 @@ export function MalikSection() {
   const [query, setQuery] = useState("");
 
   return (
-    <section className="relative overflow-hidden bg-dld-surface py-20 h-screen">
+    <section className="relative overflow-hidden bg-dld-surface py-20" style={{ height: "calc(100vh - var(--accessibility-bar-height))" }}>
       {/* Background image */}
       <div className="absolute inset-0">
         <Image

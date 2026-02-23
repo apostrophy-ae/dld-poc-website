@@ -10,16 +10,17 @@ const noqodiSvg = "/assets/2ebb7c1d83bc685c2c501a082c9096cb9c0b3144.svg";
 const locationSvg = "/assets/3d3ced911b60f60926502582de9629c9c5e26d98.svg";
 const newspaperSvg = "/assets/2778a756b0f33b5c26ad0d7160280c71d383419b.svg";
 const dubaiAeSvg = "/assets/6f45bec83e39c2cc477c7e5fbc1473eb43b6b781.svg";
+const access2 = "/assets/accessibiity2.svg";
 
 function Divider() {
   return (
-    <div className="w-px h-[27px] shrink-0">
+    <div className="w-px h-[56px] shrink-0">
       <Image
         src={dividerSvg}
         alt=""
         width={1}
-        height={27}
-        className="h-[27px] w-px"
+        height={56}
+        className="h-[56px] w-px"
       />
     </div>
   );
@@ -29,19 +30,21 @@ function BarItem({
   icon,
   label,
   href = "#",
+  gap = "gap-[6px]",
 }: {
   icon: React.ReactNode;
   label: string;
   href?: string;
+  gap?: string;
 }) {
   return (
     <Link
       href={href}
-      className="flex items-center gap-[4px] shrink-0 group hover:opacity-75 transition-opacity"
+      className={`flex items-center ${gap} shrink-0 group hover:opacity-75 transition-opacity`}
       aria-label={label}
     >
       {icon}
-      <span className="font-dubai text-[9px] leading-[8px] tracking-[0.09px] text-black whitespace-nowrap">
+      <span className="font-dubai text-[18.667px] leading-[16.593px] tracking-[0.187px] text-black whitespace-nowrap">
         {label}
       </span>
     </Link>
@@ -52,17 +55,17 @@ export function AccessibilityBar() {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 flex flex-col items-start">
       {/* Deaf / accessibility floating badge */}
-      <div className="ml-[15px]">
+      <div className="ml-[15px] mb-[6px]">
         <Link
           href="#"
           aria-label="Sign language accessibility"
-          className="flex items-center justify-center bg-[#006E20] rounded-[3px] p-[3px] hover:opacity-80 transition-opacity"
+          className="flex items-center justify-center bg-[#006E20] rounded-[6px] p-[6px] hover:opacity-80 transition-opacity"
         >
           <Image
             src={deafIcon}
             alt="Sign language"
-            width={22}
-            height={22}
+            width={44}
+            height={44}
             className="block"
           />
         </Link>
@@ -76,22 +79,34 @@ export function AccessibilityBar() {
         aria-label="Accessibility and quick-access bar"
       >
         {/* Left group: accessibility icons + services */}
-        <div className="flex items-center gap-[8px]">
-          {/* Eye icon */}
+        <div className="flex items-center gap-[16.593px]">
+          {/* Eye / accessibility icon */}
           <Link
             href="#"
             aria-label="Accessibility options"
             className="hover:opacity-75 transition-opacity shrink-0"
           >
-            <Image src={eyeSvg} alt="Accessibility" width={17} height={17} />
+            <Image src={eyeSvg} alt="Accessibility" width={35} height={35} />
+          </Link>
+
+          <Divider />
+
+          {/* Accessibility / deaf icon */}
+          <Link
+            href="#"
+            aria-label="Sign language accessibility"
+            className="hover:opacity-75 transition-opacity shrink-0"
+          >
+            <Image src={access2} alt="Accessibility" width={39} height={39} />
           </Link>
 
           <Divider />
 
           {/* Grid + Services */}
           <BarItem
-            icon={<Image src={gridSvg} alt="" width={13} height={13} />}
+            icon={<Image src={gridSvg} alt="" width={27} height={27} />}
             label="Services"
+            gap="gap-[12px]"
             href="#"
           />
         </div>
@@ -99,22 +114,23 @@ export function AccessibilityBar() {
         {/* Center: Noqodi Payment Support */}
         <Link
           href="#"
-          className="flex items-center gap-[5px] shrink-0 hover:opacity-75 transition-opacity"
+          className="flex items-center gap-[9.65px] shrink-0 hover:opacity-75 transition-opacity"
           aria-label="Noqodi Payment Support"
         >
-          <Image src={noqodiSvg} alt="Noqodi" width={49} height={10} />
-          <div className="font-dubai text-[9px] leading-[8px] tracking-[0.09px] text-black">
+          <Image src={noqodiSvg} alt="Noqodi" width={95} height={19} />
+          <div className="font-dubai text-[17.373px] leading-[15.443px] tracking-[0.174px] text-black">
             <p className="mb-0">Payment</p>
             <p>Support</p>
           </div>
         </Link>
 
         {/* Right group: nav links */}
-        <div className="flex items-center gap-[8px]">
+        <div className="flex items-center gap-[16.593px]">
           {/* Location */}
           <BarItem
-            icon={<Image src={locationSvg} alt="" width={8} height={11} />}
+            icon={<Image src={locationSvg} alt="" width={16} height={22} />}
             label="Location"
+            gap="gap-[6px]"
             href="#"
           />
 
@@ -122,8 +138,9 @@ export function AccessibilityBar() {
 
           {/* Newsroom */}
           <BarItem
-            icon={<Image src={newspaperSvg} alt="" width={12} height={11} />}
+            icon={<Image src={newspaperSvg} alt="" width={24} height={22} />}
             label="Newsroom"
+            gap="gap-[10px]"
             href="#"
           />
 
@@ -133,8 +150,8 @@ export function AccessibilityBar() {
           <BarItem
             icon={
               <svg
-                width="14"
-                height="12"
+                width="28"
+                height="24"
                 viewBox="0 0 14 12"
                 fill="none"
                 aria-hidden="true"
@@ -146,6 +163,7 @@ export function AccessibilityBar() {
               </svg>
             }
             label="Support"
+            gap="gap-[8px]"
             href="#"
           />
 
@@ -157,7 +175,7 @@ export function AccessibilityBar() {
             aria-label="dubai.ae portal"
             className="flex items-center shrink-0 hover:opacity-75 transition-opacity"
           >
-            <Image src={dubaiAeSvg} alt="dubai.ae" width={48} height={7} />
+            <Image src={dubaiAeSvg} alt="dubai.ae" width={100} height={15} />
           </Link>
 
           <Divider />
@@ -166,11 +184,29 @@ export function AccessibilityBar() {
           <Link
             href="#"
             aria-label="AI assistant"
-            className="flex items-center gap-[4px] shrink-0 hover:opacity-75 transition-opacity"
+            className="flex items-center shrink-0 hover:opacity-75 transition-opacity"
           >
-            <span className="font-dubai text-[9px] leading-[8px] tracking-[0.09px] text-black font-medium">
-              AI
-            </span>
+            <svg
+              width="37"
+              height="37"
+              viewBox="0 0 37 37"
+              fill="none"
+              aria-hidden="true"
+            >
+              <text
+                x="50%"
+                y="55%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                fontSize="18"
+                fontWeight="600"
+                fill="#006E20"
+                fontFamily="Dubai, sans-serif"
+                letterSpacing="0.2"
+              >
+                AI
+              </text>
+            </svg>
           </Link>
 
           <Divider />
@@ -182,8 +218,8 @@ export function AccessibilityBar() {
             className="flex items-center shrink-0 hover:opacity-75 transition-opacity"
           >
             <svg
-              width="14"
-              height="14"
+              width="29"
+              height="29"
               viewBox="0 0 14 14"
               fill="none"
               aria-hidden="true"
