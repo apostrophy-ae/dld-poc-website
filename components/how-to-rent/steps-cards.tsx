@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { SearchPropertyModal } from "@/components/how-to-rent/search-property-modal";
+import { cn } from "@/lib/utils";
 
 const steps = [
   {
@@ -37,6 +38,7 @@ const steps = [
     openModal: true,
     image: "/images/27d4692d979c0a130e1365c3606e19e4bdc92b0e.png",
     gradient: "from-dld-blue/25 via-dld-green/15 to-dld-blue/10",
+    imageClass: "object-cover relative scale-140 ",
   },
   {
     number: 3,
@@ -51,7 +53,7 @@ const steps = [
     ],
     link: "Learn more",
     openModal: true,
-    image: "/images/e6cd070f129dea7c6d6fed8e8c7e13bc02bc534c.png",
+    image: "/images/c5e7f1a5c3d40ea124ac3e54b3b9b596046836ed.png",
     gradient: "from-dld-green/20 via-dld-blue/20 to-dld-green/15",
   },
   {
@@ -66,8 +68,9 @@ const steps = [
     ],
     link: "Learn more",
     openModal: true,
-    image: "/images/3880bf58682a486a5aa4272d5694d20bcf5847cf.png",
+    image: "/images/e6cd070f129dea7c6d6fed8e8c7e13bc02bc534c.png",
     gradient: "from-dld-blue/20 via-dld-green/15 to-dld-blue/15",
+    imageClass: "object-cover relative scale-140 ",
   },
   {
     number: 5,
@@ -81,8 +84,9 @@ const steps = [
     ],
     link: "Learn more",
     openModal: false,
-    image: "/images/1325851a22016c025f7249a1b70ce5201b9cdbd3.png",
+    image: "/images/e6cd070f129dea7c6d6fed8e8c7e13bc02bc534c.png",
     gradient: "from-dld-green/25 via-dld-green/15 to-dld-blue/10",
+    imageClass: "scale-300 object-contain absolute",
   },
 ];
 
@@ -101,13 +105,13 @@ export function StepsCards() {
               <div className="flex flex-col lg:flex-row">
                 {/* Image with number overlay */}
                 <div
-                  className={`relative flex items-center justify-center bg-gradient-to-br ${step.gradient} lg:w-96 lg:shrink-0 h-64 lg:h-auto`}
+                  className={`overflow-hidden relative flex items-center justify-center bg-gradient-to-br ${step.gradient} lg:w-96 lg:shrink-0 h-64 lg:h-auto`}
                 >
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    className="object-cover"
+                    className={cn("object-cover", step?.imageClass)}
                     onError={() => {}}
                   />
                   {/* Number overlay */}

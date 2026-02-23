@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import { Footer } from "@/components/footer";
+import { AccessibilityBar } from "@/components/accessibility-bar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
@@ -58,8 +59,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-dubai antialiased`}
       >
-        {children}
-        <Footer />
+        <div className="pb-[44px]">
+          {children}
+          <Footer />
+        </div>
+        <AccessibilityBar />
       </body>
     </html>
   );
