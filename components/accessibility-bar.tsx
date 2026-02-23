@@ -14,14 +14,19 @@ const dubaiAeSvg = "/assets/6f45bec83e39c2cc477c7e5fbc1473eb43b6b781.svg";
 function Divider() {
   return (
     <div className="w-px h-[27px] shrink-0">
-      <Image src={dividerSvg} alt="" width={1} height={27} className="h-[27px] w-px" />
+      <Image
+        src={dividerSvg}
+        alt=""
+        width={1}
+        height={27}
+        className="h-[27px] w-px"
+      />
     </div>
   );
 }
 
 function BarItem({
   icon,
-  iconAlt,
   label,
   href = "#",
 }: {
@@ -73,7 +78,11 @@ export function AccessibilityBar() {
         {/* Left group: accessibility icons + services */}
         <div className="flex items-center gap-[8px]">
           {/* Eye icon */}
-          <Link href="#" aria-label="Accessibility options" className="hover:opacity-75 transition-opacity shrink-0">
+          <Link
+            href="#"
+            aria-label="Accessibility options"
+            className="hover:opacity-75 transition-opacity shrink-0"
+          >
             <Image src={eyeSvg} alt="Accessibility" width={17} height={17} />
           </Link>
 
@@ -123,7 +132,13 @@ export function AccessibilityBar() {
           {/* Support (headphones) */}
           <BarItem
             icon={
-              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" aria-hidden="true">
+              <svg
+                width="14"
+                height="12"
+                viewBox="0 0 14 12"
+                fill="none"
+                aria-hidden="true"
+              >
                 <path
                   d="M7 0C3.68629 0 1 2.68629 1 6V9.5C1 10.3284 1.67157 11 2.5 11H4V6.5H2.5V6C2.5 3.51472 4.51472 1.5 7 1.5C9.48528 1.5 11.5 3.51472 11.5 6V6.5H10V11H11.5C12.3284 11 13 10.3284 13 9.5V6C13 2.68629 10.3137 0 7 0Z"
                   fill="black"
@@ -166,7 +181,13 @@ export function AccessibilityBar() {
             aria-label="Chat"
             className="flex items-center shrink-0 hover:opacity-75 transition-opacity"
           >
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              aria-hidden="true"
+            >
               <path
                 d="M1 1H13C13.5523 1 14 1.44772 14 2V9.5C14 10.0523 13.5523 10.5 13 10.5H4L1 13.5V2C1 1.44772 1.44772 1 2 1H1ZM2 2.5V11.0858L3.58579 9.5H13V2.5H2Z"
                 fill="black"
